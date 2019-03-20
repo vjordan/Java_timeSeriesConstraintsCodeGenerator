@@ -1,0 +1,28 @@
+{
+	"name" : "decreasing_sequence",
+	"startingState" : "s",
+	"states" : ["s","t"],
+	"links" : [
+		{"from" :"s",
+		"sig" :"gt",
+		"to" :"t",
+		"letter" :"found"},
+		{"from" :"s",
+		"sig" :"leq",
+		"to" :"s",
+		"letter" :"out"},
+		{"from" :"t",
+		"sig" :"gt",
+		"to" :"t",
+		"letter" :"in"},
+		{"from" :"t",
+		"sig" :"eq",
+		"to" :"t",
+		"letter" :"maybeA"},
+		{"from" :"t",
+		"sig" :"lt",
+		"to" :"s",
+		"letter" :"outA"}
+	],
+	"nodeDistance" : 30
+}

@@ -1,0 +1,24 @@
+{
+	"name" : "steady_sequence",
+	"startingState" : "s",
+	"states" : ["s","r"],
+	"links" : [
+		{"from" :"s",
+		"sig" :"neq",
+		"to" :"s",
+		"letter" :"out"},
+		{"from" :"s",
+		"sig" :"eq",
+		"to" :"r",
+		"letter" :"found"},
+		{"from" :"r",
+		"sig" :"neq",
+		"to" :"s",
+		"letter" :"outA"},
+		{"from" :"r",
+		"sig" :"eq",
+		"to" :"r",
+		"letter" :"in"}
+	],
+	"nodeDistance" : 30
+}

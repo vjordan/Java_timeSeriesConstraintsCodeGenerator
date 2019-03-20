@@ -1,0 +1,16 @@
+{
+	"name" : "increasing",
+	"startingState" : "s",
+	"states" : ["s"],
+	"links" : [
+		{"from" :"s",
+		"sig" :"geq",
+		"to" :"s",
+		"letter" :"out"},
+		{"from" :"s",
+		"sig" :"lt",
+		"to" :"s",
+		"letter" :"foundE"}
+	],
+	"nodeDistance" : 30
+}

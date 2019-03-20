@@ -1,0 +1,16 @@
+{
+	"name" : "steady",
+	"startingState" : "s",
+	"states" : ["s"],
+	"links" : [
+		{"from" :"s",
+		"sig" :"neq",
+		"to" :"s",
+		"letter" :"out"},
+		{"from" :"s",
+		"sig" :"eq",
+		"to" :"s",
+		"letter" :"foundE"}
+	],
+	"nodeDistance" : 30
+}

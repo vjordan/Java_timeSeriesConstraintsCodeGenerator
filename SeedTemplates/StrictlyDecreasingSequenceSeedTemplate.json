@@ -1,0 +1,24 @@
+{
+	"name" : "strictly_decreasing_sequence",
+	"startingState" : "s",
+	"states" : ["s","r"],
+	"links" : [
+		{"from" :"s",
+		"sig" :"gt",
+		"to" :"r",
+		"letter" :"found"},
+		{"from" :"s",
+		"sig" :"leq",
+		"to" :"s",
+		"letter" :"out"},
+		{"from" :"r",
+		"sig" :"gt",
+		"to" :"r",
+		"letter" :"in"},
+		{"from" :"r",
+		"sig" :"leq",
+		"to" :"s",
+		"letter" :"outA"}
+	],
+	"nodeDistance" : 30
+}

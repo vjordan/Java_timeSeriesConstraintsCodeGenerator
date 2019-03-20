@@ -1,0 +1,488 @@
+{
+	"name": "feature",
+	"instructionsInit": [
+		{
+			"var": "C",
+			"function": "true",
+			"init": "neutral"
+		},
+		{
+			"var": "D",
+			"function": "true",
+			"init": "neutral"
+		}
+	],
+	"instructionsFinal": [
+		{
+			"var": "e",
+			"index": "n",
+			"useOther": "true",
+			"value": "C",
+			"indexOther":"+0"
+		},
+		{
+			"var": "f",
+			"index": "n",
+			"function": "true",
+			"value": "defaultF"
+		}
+
+	],
+	"instructionsTable": [
+		{
+			"step": "out",
+			"after": 0,
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				}
+			]
+		},
+		{
+			"step": "outR",
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				}
+			],
+			"updates": [
+				{
+					"var": "D",
+					"function": "true",
+					"value": "neutral"
+				}
+			]
+		},
+		{
+			"step": "outA",
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"useOther":"true",
+					"value":"C",
+					"indexOther":"+0"
+				}
+			],
+			"updates": [
+				{
+					"var": "C",
+					"function": "true",
+					"value": "defaultF"
+				},
+				{
+					"var": "D",
+					"function": "true",
+					"value": "neutral"
+				}
+			]
+		},
+		{
+			"step": "maybeB",
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"useOther":"true",
+					"value":"e",
+					"indexOther":"+1"
+				}
+			],
+			"updates": [
+				{
+					"var": "D",
+					"function": "true",
+					"value": "phi",
+					"funparam": [
+						{
+							"useOther":"true",
+							"value":"D"
+						},
+						{
+							"function": "true",
+							"value": "delta"
+						}
+					]
+				}
+			]
+		},
+		{
+			"step": "maybeA",
+			"after": 0,
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"useOther":"true",
+					"value":"e",
+					"indexOther":"+1"
+				}
+			],
+			"updates": [
+				{
+					"var": "D",
+					"function": "true",
+					"value": "phi",
+					"funparam": [
+						{
+							"useOther":"true",
+							"value":"D"
+						},
+						{
+							"function": "true",
+							"value": "deltaPrime"
+						}
+					]
+				}
+			]
+		},
+		{
+			"step": "maybeA",
+			"after": 1,
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"useOther":"true",
+					"value":"e",
+					"indexOther":"+1"
+				}
+			],
+			"updates": [
+				{
+					"var": "D",
+					"function": "true",
+					"value": "phi",
+					"funparam": [
+						{
+							"useOther":"true",
+							"value":"D"
+						},
+						{
+							"function": "true",
+							"value": "delta"
+						}
+					]
+				}
+			]
+		},
+		{
+			"step": "found",
+			"after": 0,
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"useOther":"true",
+					"value":"e",
+					"indexOther":"+0"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"useOther":"true",
+					"value":"e",
+					"indexOther":"+1"
+				}
+			],
+			"updates": [
+				{
+					"var": "C",
+					"function": "true",
+					"value": "phi",
+					"funparam": [
+						{
+							"function": "true",
+							"value": "phi",
+							"funparam": [
+								{
+									"useOther":"true",
+									"value":"D"
+								},
+								{
+									"function": "true",
+									"value": "delta"
+								}
+							]
+						},
+						{
+							"function": "true",
+							"value": "deltaPrime"
+						}
+					]
+				},
+				{
+					"var": "D",
+					"function": "true",
+					"value": "neutral"
+				}
+			]
+		},
+		{
+			"step": "found",
+			"after": 1,
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"useOther":"true",
+					"value":"e",
+					"indexOther":"+0"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"useOther":"true",
+					"value":"e",
+					"indexOther":"+1"
+				}
+			],
+			"updates": [
+				{
+					"var": "C",
+					"function": "true",
+					"value": "phi",
+					"funparam": [
+						{
+							"useOther":"true",
+							"value":"D"
+						},
+						{
+							"function": "true",
+							"value": "delta"
+						}
+					]
+				},
+				{
+					"var": "D",
+					"function": "true",
+					"value": "neutral"
+				}
+			]
+		},
+		{
+			"step": "in",
+			"after": 0,
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"useOther":"true",
+					"value":"e",
+					"indexOther":"+1"
+				}
+			],
+			"updates": [
+				{
+					"var": "C",
+					"function": "true",
+					"value": "phi",
+					"funparam": [
+						{
+							"useOther":"true",
+							"value":"C"
+						},
+						{
+							"function": "true",
+							"value": "phi",
+							"funparam": [
+								{
+									"useOther":"true",
+									"value":"D"
+								},
+								{
+									"function": "true",
+									"value": "deltaPrime"
+								}
+							]
+						}
+					]
+				},
+				{
+					"var": "D",
+					"function": "true",
+					"value": "neutral"
+				}
+			]
+		},
+		{
+			"step": "in",
+			"after": 1,
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"useOther":"true",
+					"value":"e",
+					"indexOther":"+1"
+				}
+			],
+			"updates": [
+				{
+					"var": "C",
+					"function": "true",
+					"value": "phi",
+					"funparam": [
+						{	
+							"useOther":"true",
+							"value":"C"
+						},
+						{
+							"function": "true",
+							"value": "phi",
+							"funparam": [
+								{
+									"useOther":"true",
+									"value":"D"
+								},
+								{
+									"function": "true",
+									"value": "delta"
+								}
+							]
+						}
+					]
+				},
+				{
+					"var": "D",
+					"function": "true",
+					"value": "neutral"
+				}
+			]
+		},
+		{
+			"step": "foundE",
+			"after": 0,
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value": "phi",
+					"funparam": [
+						{
+							"function": "true",
+							"value": "phi",
+							"funparam": [
+								{
+									"useOther":"true",
+									"value":"D"
+								},
+								{
+									"function": "true",
+									"value": "delta"
+								}
+							]
+						},
+						{
+							"function": "true",
+							"value": "deltaPrime"
+						}
+					]
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				}
+			],
+			"updates": [
+				{
+					"var": "D",
+					"function": "true",
+					"value": "neutral"
+				}
+			]
+		},
+		{
+			"step": "foundE",
+			"after": 1,
+			"guards":[
+				{
+					"var":"f",
+					"index":"+0",
+					"function":"true",
+					"value":"phi",
+					"funparam":[
+						{
+							"useOther":"true",
+							"value":"D"
+						},
+						{
+							"function":"true",
+							"value":"delta"
+						}
+					]
+				},
+				{
+					"var":"e",
+					"index":"+0",
+					"function":"true",
+					"value":"defaultF"
+				}
+			],
+			"updates": [
+				{
+					"var": "D",
+					"function": "true",
+					"value": "neutral"
+				}
+			]
+		}
+	]
+}
